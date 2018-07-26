@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "losdatos <- read.csv('femaleMiceWeights.csv')\n\nk1 <- losdatos %>% filter(Diet=='chow') %>% select(Bodyweight) %>% unlist\nt1 <- losdatos %>% filter(Diet=='hf') %>% select(Bodyweight) %>% unlist\n\nobs <- mean(t1) - mean(k1)\nobs\n\npopulation <- read.csv('femaleControlsPopulation.csv')\npopulation <- unlist(population)\nset.seed(1)\nn <- 1000\ncontenedor <- vector('numeric', n)\nfor (i in 1:n) {\n  muestra1 <- sample(population, 50)\n  #muestra2 <- sample(population, 50)\n  contenedor[i] <- mean(muestra1) #- mean(muestra2)\n}\n\nlafunc <- function(iteraciones, ksamples) {\n  set.seed(1)\n  contenedor <- vector('numeric', iteraciones)\n  for (i in 1:iteraciones) {\n    muestra1 <- sample(population, ksamples)\n    contenedor[i] <- mean(muestra1)\n  }\n  contenedor\n}\n",
+    "created" : 1529393663548.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "705107722",
+    "id" : "47BAFFBC",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1529417944026,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

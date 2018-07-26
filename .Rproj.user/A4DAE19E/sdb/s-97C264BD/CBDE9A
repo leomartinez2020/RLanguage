@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# My code\n\n# Load needed libraries\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(ggthemes)\nlibrary(ggrepel)\n\nmisdatos <- read.csv('df_murders2017.csv')\nhead(misdatos)\n# Calculamos el slope de los datos:\nr <- misdatos %>% \n  summarize(rate=sum(Homicidios) / sum(Poblacion)) %>% .$rate\n\n#k <- ggplot(data = misdatos)\nk <- misdatos %>% ggplot(aes(Poblacion, Homicidios, label = abb)) +\n  geom_abline(slope = r, lty=2, color='darkgrey') +\n  geom_point(aes(col = Región), size=3) +\n  #geom_text(nudge_x = 100000, nudge_y = 90) +\n  geom_text_repel() +\n  xlab(\"Población por departamento\") +\n  ylab(\"Número de homicidios\") +\n  ggtitle(\"Homicidios en Colombia en 2017\") +\n  theme_economist()\n\nk\nslope <- sum(misdatos$Homicidios) / sum(misdatos$Poblacion)\nslope\n",
+    "created" : 1529051113937.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1033426595",
+    "id" : "CBDE9A",
+    "lastKnownWriteTime" : 1529290176,
+    "last_content_update" : 1529290176835,
+    "path" : "~/erre/grafica_ggplot.R",
+    "project_path" : "grafica_ggplot.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

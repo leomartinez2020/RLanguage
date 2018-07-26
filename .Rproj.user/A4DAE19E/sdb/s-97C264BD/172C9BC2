@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "dat <- read.csv('mice_pheno.csv')\n\nset.seed(1)\ny <- filter(dat, Sex==\"M\" & Diet==\"chow\") %>% select(Bodyweight) %>% unlist\navgs <- replicate(10000, mean( sample(y, 25)))\nmypar(1,2)\nhist(avgs)\nqqnorm(avgs)\nqqline(avgs)\n",
+    "created" : 1529463388395.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2586396158",
+    "id" : "172C9BC2",
+    "lastKnownWriteTime" : -7137992486378536960,
+    "last_content_update" : 1529463701939,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

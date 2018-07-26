@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1529316767257.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D1F5900B",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1529316767257,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "ED2593FA",
+        "caption" : "dany",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dany&cache_key=ED2593FA",
+        "displayedObservations" : 24,
+        "environment" : "",
+        "object" : "dany",
+        "preview" : 0,
+        "totalObservations" : 24,
+        "variables" : 2
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
